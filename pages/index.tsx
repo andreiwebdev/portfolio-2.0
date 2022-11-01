@@ -1,28 +1,31 @@
-import Head from 'next/head'
-import Header from '../components/Header'
+import Head from "next/head";
+import Header from "../components/Header";
+import Hero from "../components/Hero";
 
 export default function Home() {
-  return (
-    <div>
-      <Head>
-        <title>Andrei's Portfolio</title>
-      </Head>
+    return (
+        <div className="bg-[rgb(36,36,36)] text-white h-screen snap-y snap-mandatory overflow-scroll z-0">
+            <Head>
+                <title>Andrei's Portfolio</title>
+            </Head>
 
-      {/* Header */}
-      <Header />
+            {/* Header */}
+            <Header />
 
-      {/* Hero */}
+            {/* Hero */}
+            <section id="hero" className="snap-center">
+                <Hero />
+            </section>
 
-      {/* About */}
+            {/* About */}
 
-      {/* Experience */}
+            {/* Experience */}
 
-      {/* Skills */}
+            {/* Skills */}
 
-      {/* Projects */}
+            {/* Projects */}
 
-      {/* Contact Me */}
-
-    </div>
-  )
+            {/* Contact Me */}
+        </div>
+    );
 }
