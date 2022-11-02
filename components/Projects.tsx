@@ -78,7 +78,11 @@ export default function Projects({}: Props) {
                             whileInView={{ opacity: 1, y: 0 }}
                             viewport={{ once: true }}
                         >
-                            <img src={`${project.image}`} alt="" />
+                            <img
+                                className="w-full max-w-3xl"
+                                src={`${project.image}`}
+                                alt=""
+                            />
                         </motion.a>
 
                         <div className="space-y-10 px-0 md:px-10 max-w-6xl">
