@@ -9,8 +9,8 @@ export default function Hero({}: Props) {
     const [text, count] = useTypewriter({
         words: [
             "Hi, My name is Andrei Dragomir",
-            "Some-example-text.jsx",
-            "<SomeOtherExample />",
+            "I-love-to-code.jsx",
+            "<ContactMe />",
         ],
         loop: true,
         delaySpeed: 2000,
@@ -19,11 +19,7 @@ export default function Hero({}: Props) {
     return (
         <div className="h-screen flex flex-col space-y-8 items-center justify-center text-center overflow-hidden">
             <BackgroundCircles />
-            <img
-                className="relative rounded-full h-32 w-32 mx-auto object-cover"
-                src="https://via.placeholder.com/600x600"
-                alt=""
-            />
+
             <div className="z-20">
                 <h2 className="text-sm uppercase text-gray-500 pb-2 tracking-[15px]">
                     Web Developer

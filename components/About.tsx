@@ -1,5 +1,7 @@
 import React from "react";
 import { motion } from "framer-motion";
+import Image from "next/image";
+import ProgrammingImg from "../images/programming.jpg";
 
 type Props = {};
 
@@ -15,7 +17,7 @@ export default function About({}: Props) {
                 About
             </h3>
 
-            <motion.img
+            <motion.div
                 initial={{
                     x: -200,
                     opacity: 0,
@@ -25,9 +27,14 @@ export default function About({}: Props) {
                 }}
                 whileInView={{ x: 0, opacity: 1 }}
                 viewport={{ once: true }}
-                src="https://via.placeholder.com/600x800"
-                className="-mb-20 md:mb-0 flex-shrink-0 w-56 h-56 rounded-full object-cover md:rounded-lg md:w-64 mh:h-96 xl:w-[500px] xl:h-[600px]"
-            />
+                className="-mb-20 md:mb-0 flex-shrink-0"
+            >
+                <Image
+                    src={ProgrammingImg}
+                    className="w-56 h-56 rounded-full object-cover md:rounded-lg md:w-64 mh:h-96 xl:w-[500px] xl:h-[600px]"
+                    alt="Programming image HTML CSS JS"
+                />
+            </motion.div>
 
             <div className="space-y-10 px-0 md:px-10">
                 <h4 className="text-4xl font-semibold">
@@ -38,14 +45,12 @@ export default function About({}: Props) {
                     background
                 </h4>
                 <p className="text-sm">
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                    Dicta tenetur dolorem quia maxime, dolorum, at vitae dolor
-                    animi asperiores minima, id amet? Optio, unde excepturi
-                    maiores delectus doloribus in veniam sequi dolores? Sapiente
-                    fuga, vero fugit deleniti iusto commodi enim delectus eaque
-                    maiores laudantium placeat ducimus, saepe necessitatibus
-                    libero amet optio, iure aut suscipit rerum ab rem! Nihil,
-                    nobis veritatis.
+                    I’m a Front-End Developer located in Bucharest, Romania.
+                    Well-organised person, problem solver, independent employee
+                    with high attention to detail. Fan of Video Games, MMA,
+                    Music and TV Series. Interested in the entire frontend
+                    spectrum and working on ambitious projects with positive
+                    people.
                 </p>
             </div>
         </motion.div>

@@ -1,10 +1,54 @@
 import React from "react";
 import { motion } from "framer-motion";
+import Image from "next/image";
+import ProjectImg1 from "../images/project-img1.png";
+import ProjectImg2 from "../images/project-img2.png";
+import ProjectImg3 from "../images/project-img3.png";
+import ProjectImg4 from "../images/project-img4.png";
+import ProjectImg5 from "../images/project-img5.png";
+import ProjectImg6 from "../images/project-img6.png";
 
 type Props = {};
 
 export default function Projects({}: Props) {
-    const projects = [1, 2, 3, 4, 5];
+    const projects = [
+        {
+            name: "Safle - Crypto Dashboard",
+            text: "React.js, SCSS, JS, NPM, GIT",
+            image: ProjectImg1,
+            link: "https://app.getsafle.com/",
+        },
+        {
+            name: "Cacique - Gambling Website",
+            text: "jQuery, Bootstrap, SCSS, PHP, GIT",
+            image: ProjectImg2,
+            link: "https://cacique-casino.co/",
+        },
+        {
+            name: "JerseyCasinos - Gambling Website",
+            text: "jQuery, Bootstrap, SCSS, PHP, GIT",
+            image: ProjectImg3,
+            link: "https://jersey-casinos.com/",
+        },
+        {
+            name: "Facibanionline - Gambling Website",
+            text: "jQuery, Bootstrap, SCSS, PHP, GIT",
+            image: ProjectImg4,
+            link: "http://facibanionline.ro/",
+        },
+        {
+            name: "Casino.com.ro - Gambling Website",
+            text: "jQuery, Bootstrap, SCSS, PHP, GIT",
+            image: ProjectImg5,
+            link: "http://casino.com.ro/",
+        },
+        {
+            name: "Supercazino - Gambling Website",
+            text: "jQuery, Bootstrap, SCSS, PHP, GIT",
+            image: ProjectImg6,
+            link: "https://supercazino.ro/",
+        },
+    ];
 
     return (
         <motion.div
@@ -21,9 +65,11 @@ export default function Projects({}: Props) {
                 {projects.map((project, index) => (
                     <div
                         key={index}
-                        className="w-screen flex-shrink-0 snap-center flex flex-col space-y-5 items-center justify-center p-20 md:p-44 h-screen"
+                        className="w-screen flex-shrink-0 snap-center flex flex-col space-y-5 items-center justify-center p-10 md:p-44 h-screen"
                     >
-                        <motion.img
+                        <motion.a
+                            href={project.link}
+                            target="_blank"
                             initial={{
                                 y: -300,
                                 opacity: 0,
@@ -31,26 +77,25 @@ export default function Projects({}: Props) {
                             transition={{ duration: 1.2 }}
                             whileInView={{ opacity: 1, y: 0 }}
                             viewport={{ once: true }}
-                            src="https://via.placeholder.com/666x375"
-                            alt=""
-                        />
+                        >
+                            <Image
+                                src={project.image}
+                                width={700}
+                                alt="project image"
+                            />
+                        </motion.a>
 
                         <div className="space-y-10 px-0 md:px-10 max-w-6xl">
                             <h4 className="text-4xl font-semibold text-center">
                                 <span className="underline decoration-[#00d8ff]/50">
                                     Project {index + 1} of {projects.length}:
-                                </span>
-                                Website name
+                                </span>{" "}
+                                <br />
+                                {project.name}
                             </h4>
 
-                            <p className="text-lg text-center md:text-left">
-                                Lorem ipsum dolor sit amet consectetur
-                                adipisicing elit. Sit voluptatibus possimus
-                                aperiam dicta, unde repellat consequuntur eos
-                                odio debitis sunt doloribus perferendis ullam
-                                distinctio voluptatum officia ea enim nam in
-                                deleniti perspiciatis cum nihil dolore illo
-                                iure! Suscipit, officia voluptate.
+                            <p className="text-lg text-center">
+                                {project.text}
                             </p>
                         </div>
                     </div>
