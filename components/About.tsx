@@ -1,7 +1,5 @@
 import React from "react";
 import { motion } from "framer-motion";
-import Image from "next/image";
-import ProgrammingImg from "../images/programming.jpg";
 
 type Props = {};
 
@@ -29,8 +27,8 @@ export default function About({}: Props) {
                 viewport={{ once: true }}
                 className="-mb-20 md:mb-0 flex-shrink-0"
             >
-                <Image
-                    src={ProgrammingImg}
+                <img
+                    src="/images/programming.jpg"
                     className="w-56 h-56 rounded-full object-cover md:rounded-lg md:w-64 mh:h-96 xl:w-[500px] xl:h-[600px]"
                     alt="Programming image HTML CSS JS"
                 />

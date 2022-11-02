@@ -15,37 +15,37 @@ export default function Projects({}: Props) {
         {
             name: "Safle - Crypto Dashboard",
             text: "React.js, SCSS, JS, NPM, GIT",
-            image: ProjectImg1,
+            image: "images/project-img1.png",
             link: "https://app.getsafle.com/",
         },
         {
             name: "Cacique - Gambling Website",
             text: "jQuery, Bootstrap, SCSS, PHP, GIT",
-            image: ProjectImg2,
+            image: "images/project-img2.png",
             link: "https://cacique-casino.co/",
         },
         {
             name: "JerseyCasinos - Gambling Website",
             text: "jQuery, Bootstrap, SCSS, PHP, GIT",
-            image: ProjectImg3,
+            image: "images/project-img3.png",
             link: "https://jersey-casinos.com/",
         },
         {
             name: "Facibanionline - Gambling Website",
             text: "jQuery, Bootstrap, SCSS, PHP, GIT",
-            image: ProjectImg4,
+            image: "images/project-img4.png",
             link: "http://facibanionline.ro/",
         },
         {
             name: "Casino.com.ro - Gambling Website",
             text: "jQuery, Bootstrap, SCSS, PHP, GIT",
-            image: ProjectImg5,
+            image: "images/project-img5.png",
             link: "http://casino.com.ro/",
         },
         {
             name: "Supercazino - Gambling Website",
             text: "jQuery, Bootstrap, SCSS, PHP, GIT",
-            image: ProjectImg6,
+            image: "images/project-img6.png",
             link: "https://supercazino.ro/",
         },
     ];
@@ -78,11 +78,7 @@ export default function Projects({}: Props) {
                             whileInView={{ opacity: 1, y: 0 }}
                             viewport={{ once: true }}
                         >
-                            <Image
-                                src={project.image}
-                                width={700}
-                                alt="project image"
-                            />
+                            <img src={`${project.image}`} alt="" />
                         </motion.a>
 
                         <div className="space-y-10 px-0 md:px-10 max-w-6xl">
